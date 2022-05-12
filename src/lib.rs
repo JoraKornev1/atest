@@ -50,3 +50,22 @@ impl Math for Rectangle {
         (self.0 + self.1) * 2.0
    }
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn math_sqare() {
+        let x = Sqare (1.0);
+        assert_eq!(x.math_x(), 4.0);
+    }
+
+    #[test]
+    fn math_rectangle() {
+        let x = Rectangle (1.0, 1.0);
+        assert_eq!(x.math_x(), 4.0);
+    }
+
+}
