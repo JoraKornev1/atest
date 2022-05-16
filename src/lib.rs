@@ -63,9 +63,12 @@ mod tests {
     }
 
     #[test]
-    fn math_rectangle() {
+    fn math_rectangle() ->Result<(), String>  {
         let x = Rectangle (1.0, 1.0);
-        assert_eq!(x.math_x(), 4.0);
+        match x.math_x() {
+            4.0 => Ok(()),
+            _ => Err("Must be 4 here".to_owned())
+        }
     }
 
 }
