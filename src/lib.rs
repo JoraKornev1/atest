@@ -34,7 +34,6 @@ impl Sqare {
     }
 
 }
-
 pub struct Rectangle (f64, f64);
 impl Rectangle {
     pub fn read_rectangle() -> Self {
@@ -61,13 +60,14 @@ mod tests {
         let x = Sqare (1.0);
         assert_eq!(x.math_x(), 4.0);
     }
-
+    
     #[test]
     fn math_rectangle() ->Result<(), String>  {
         let x = Rectangle (1.0, 1.0);
-        match x.math_x() {
-            4.0 => Ok(()),
-            _ => Err("Must be 4 here".to_owned())
+        if x.math_x() == 4.0 {
+            Ok(())           
+        } else {
+            Err("Must be 4".to_owned())
         }
     }
 
