@@ -5,5 +5,5 @@ fn main() {
     let y = Rectangle::read_rectangle();
     y.print_x();
 
-    
+       
 }

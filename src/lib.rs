@@ -64,11 +64,21 @@ mod tests {
     #[test]
     fn math_rectangle() ->Result<(), String>  {
         let x = Rectangle (1.0, 1.0);
-        if x.math_x() == 4.0 {
-            Ok(())           
-        } else {
-            Err("Must be 4".to_owned())
+
+        match x.math_x() {
+            result if result == 4.0 => Ok(()),
+            _ => Err("Must be 4.0".to_string())
         }
+
+        
+
+
+        // if x.math_x() == 4.0 {
+        //     Ok(())           
+        // } else {
+        //     Err("Must be 4".to_owned())
+        // }
     }
 
 }
+
