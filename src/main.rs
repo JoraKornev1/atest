@@ -1,9 +1,20 @@
 use atest::*;
 fn main() {
-    let x = Sqare::read_square();
-    x.print_x();
-    let y = Rectangle::read_rectangle();
-    y.print_x();
+    let square = Sqare::new();
+    let reactangle = Rectangle::new();
+    let circle = Circle::new();
+    let mut vecs: Vec<&dyn Math> = Vec::new();
+    vecs.push(&square);
+    vecs.push(&reactangle);
+    vecs.push(&circle);
+
+
+    for i in vecs {
+        i.print();
+    }
+
+   
+
 
        
 }
